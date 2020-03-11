@@ -3,7 +3,7 @@
   tasks:
   - name: copy consul-template-binaries
     yum:
-      name: pip
+      name: git
       state: present
    
 

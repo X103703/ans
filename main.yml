@@ -1,0 +1,25 @@
+---
+- hosts: test2
+  tasks:
+  - name: copy consul-template-binaries
+    copy:
+      src: ./files/consul-template
+      dest: /var/lib/haproxy/consul-template
+      owner: haproxy
+      group: haproxy
+
+
+  - name: copy consul-template-conf
+    copy:
+      src: ./files/haproxy.tpl
+      dest: /var/lib/haproxy/haproxy.tpl
+      owner: haproxy
+      group: haproxy
+
+  - name: copy haproxy restart files
+    copy:
+      src: ./files/ha.sh
+      dest: /var/lib/haproxy/ha.sh
+      owner: haproxy
+      group: haproxy
+

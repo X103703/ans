@@ -5,6 +5,10 @@
     copy:
       src: ./target/demo-thornthail.jar 
       dest: /home/cloud_user/demo-thornthail.jar 
-   
+      
+   - name: execute jar
+     shell: java -Dthorntail.http.port=8181 -jar ./demo-thornthail.jar
+    
+      
 
 

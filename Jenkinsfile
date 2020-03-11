@@ -6,7 +6,7 @@ pipeline {
         steps {
          git (credentialsId: 'desboisdimitri', url: 'https://github.com/X103703/canary-release.git')
            sh '$MVN/mvn package'
-           sh 'nohup java -Dthorntail.http.port=8181 -jar ./target/demo-thorntail.jar &'
+
         }
    }
       
@@ -19,7 +19,7 @@ pipeline {
    
    stage('End') {
      steps {
-       echo 'Ending...'
+        sh 'nohup java -Dthorntail.http.port=8181 -jar ./target/demo-thorntail.jar &'
      }
    }
    }

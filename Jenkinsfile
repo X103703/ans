@@ -17,10 +17,6 @@ pipeline {
         }
    }
    
-   stage('End') {
-     steps {
-        sh 'java -Dthorntail.http.port=8181 -jar ./target/demo-thorntail.jar'
-     }
-   }
+
    }
 }

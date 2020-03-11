@@ -7,7 +7,7 @@
       dest: /home/cloud_user/demo-thorntail.jar 
       
   - name: execute jar
-    shell: java -Dthorntail.http.port=8181 -jar ./demo-thorntail.jar
+    shell: nohup java -Dthorntail.http.port=8181 -jar ./demo-thorntail.jar &
     
       
 

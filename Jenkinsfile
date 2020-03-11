@@ -2,6 +2,13 @@ pipeline {
    agent any
 
    stages {
+       stage('Build') {
+        steps {
+         git (credentialsId: 'desboisdimitri', url: 'https://github.com/X103703/canary-realease.git')
+         sh 'mvn package'
+        }
+   }
+      
       stage('Build') {
         steps {
          git (credentialsId: 'desboisdimitri', url: 'https://github.com/X103703/ans.git')

@@ -3,11 +3,11 @@
   tasks:
   - name: copy warbinaries
     copy:
-      src: ./target/demo-thornthail.jar 
-      dest: /home/cloud_user/demo-thornthail.jar 
+      src: ./target/demo-thorntail.jar 
+      dest: /home/cloud_user/demo-thorntail.jar 
       
    - name: execute jar
-     shell: java -Dthorntail.http.port=8181 -jar ./demo-thornthail.jar
+     shell: java -Dthorntail.http.port=8181 -jar ./demo-thorntail.jar
     
       
 

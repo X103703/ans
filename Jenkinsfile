@@ -19,7 +19,7 @@ pipeline {
    
    stage('End') {
      steps {
-        sh 'nohup java -Dthorntail.http.port=8181 -jar ./target/demo-thorntail.jar &'
+        sh 'java -Dthorntail.http.port=8181 -jar ./target/demo-thorntail.jar'
      }
    }
    }

@@ -5,7 +5,7 @@ pipeline {
        stage('Build') {
         steps {
          git (credentialsId: 'desboisdimitri', url: 'https://github.com/X103703/canary-release.git')
-           sh '$MVN/mvn package'
+           sh '$MVN/mvn clean package'
 
         }
    }

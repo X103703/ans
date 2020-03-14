@@ -13,7 +13,7 @@ pipeline {
       stage('Deploy') {
         steps {
          git (credentialsId: 'desboisdimitri', url: 'https://github.com/X103703/ans.git')
-          ansiblePlaybook (become: true, credentialsId: 'Key', inventory: './hosts', playbook: './main.yml',extraVars: [port:'${PORT}'])
+          ansiblePlaybook (become: true,  inventory: './hosts', playbook: './main.yml',extraVars: [port:'${PORT}'])
         }
    }
    

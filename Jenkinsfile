@@ -19,7 +19,7 @@ pipeline {
         
          //sh 'echo {\""ID\"": \""check-${VERSION}\"",\""Name\"": \""check-${VERSION}\"",\""HTTP\"": \""http://172.31.29.255:${PORT}/v1/hello\"",\""Method\"": \""GET\"",\""ServiceID\"": \""back-${VERSION}\"",\""Interval\"": \""10s\"",\""TLSSkipVerify\"": true} > payload.json' 
         }
-   }
+   } 
    
 
    }

@@ -13,7 +13,7 @@ pipeline {
       stage('Deploy') {
         steps {
          git (credentialsId: 'desboisdimitri', url: 'https://github.com/X103703/ans.git')
-         ansiblePlaybook (become: true,  inventory: './hosts', playbook: './main.yml',extraVars: [port:'${PORT}'])
+         ansiblePlaybook (become: true,  inventory: './hosts', playbook: './main.yml',extraVars: [port:'${PORT}']) 
          sh 'consul services register -id=back-${VERSION} -address=dimaxe3c.mylabserver.com -port=${PORT} -tag=${VERSION} -name=backend -http-addr=${CONSUL_ENDPOINT}'
          build job: 'register', parameters: [string(name: 'VERSION', value: "${params.VERSION}"), string(name: 'PORT', value: "${params.PORT}")]
         

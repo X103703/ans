@@ -1,10 +1,12 @@
 ---
-- hosts: kube-hosts
+- hosts: kubehosts
   tasks:
   - name: disable swap
-    shell: swapoff
-      src: /home/cloud_user/.jenkins/workspace/build-app/target/demo-thorntail.jar 
-      dest: /home/cloud_user/demo-thorntail.jar 
+    shell: /sbin/swapoff /root/swap
       
-  - name: execute jar
-    shell: nohup java -Dthorntail.http.port={{port}} -jar ./demo-thorntail.jar &   
+      
+  - name: starting kubelet
+    systemd:
+      name: kubelet
+      state: started
+    

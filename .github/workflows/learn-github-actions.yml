@@ -11,5 +11,6 @@ jobs:
 #          node-version: '14'
           distribution: 'temurin'
           java-version: '17'
-      - run: java -version
+#      - run: java -version
+      - run: yum install httpd -y
 #      - run: bats -v

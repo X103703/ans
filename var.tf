@@ -14,7 +14,7 @@ variable "cg_secret_key" {
 
 variable "cg_account" {
   type = string
-  default = ${{ secrets.ACCOUNTID }}
+  default = 636273203390
 }
 
 variable "cg_region" {

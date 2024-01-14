@@ -1,3 +1,4 @@
+/*
 variable "cg_acces_key" {
   type = string
   default = "AKIA3Y2AWHAVBZFU64SH"
@@ -9,10 +10,11 @@ variable "cg_secret_key" {
   default = "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"
 
 }
+*/
 
 variable "cg_account" {
   type = string
-  default = "809200138282"
+  default = ${{ secrets.ACCOUNTID }}
 }
 
 variable "cg_region" {

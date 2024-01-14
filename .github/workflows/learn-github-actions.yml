@@ -12,5 +12,5 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 #      - run: java -version
-      - run: yum install httpd -y
+      - run: docker pull bkimminich/juice-shop
 #      - run: bats -v

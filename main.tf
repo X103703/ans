@@ -2,9 +2,9 @@ provider "aws" {
 
     region = "us-east-1"
 
-    access_key = var.cg_acces_key
+   // access_key = var.cg_acces_key
 
-    secret_key = var.cg_secret_key
+    // secret_key = var.cg_secret_key
 
 }
 

@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-c
+  description: Team C
+spec:
+  type: team
+  profile:
+    displayName: Team C
+    email: team-c@example.com
+    picture: https://api.dicebear.com/7.x/identicon/svg?seed=Loki&backgroundType=gradientLinear&backgroundColor=b6e3f4,ffd5dc,ffdfbf,c0aede
+  parent: boxoffice
+  children: []

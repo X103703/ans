@@ -41,16 +41,24 @@ spec:
             
     - title: Choose your environement
       required:
-        - repoUrl
+        - environment
       properties:
-        repoUrl:
-          title: Environement type
-          type: string
-          ui:field: RepoUrlPicker
-          ui:options:
-            allowedHosts:
-              - DEV
-              - PROD
+        environment:
+        title: Volume Type
+        type: string
+        description: Choose your environnement
+        default: dev
+        enum:
+          - dev
+          - uat
+          - ppd
+          - prd
+        enumNames:
+          - 'Developement'
+          - 'User Acceptance Testing'
+          - 'Pre production'
+          - 'Production'
+        
 
   # These steps are executed in the scaffolder backend, using data that we gathered
   # via the parameters above.
@@ -71,7 +79,7 @@ spec:
       input:
         allowedHosts: ['github.com']
         description: This is ${{ parameters.name }}
-        repoUrl: ${{ parameters.repoUrl }}
+        repoUrl: ${{ parameters.environment }}
 
     # The final step is to register our new component in the catalog.
     - id: register

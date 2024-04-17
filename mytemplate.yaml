@@ -2,7 +2,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: naas
-  title: namespace as a Service
+  title: Namespace as a Service
   description: Get a namespace for your container workloads
 spec:
   owner: user:guest

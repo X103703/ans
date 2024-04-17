@@ -1,8 +1,8 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: namespace-as-a-service
-  title: Namespace as a service
+  name: namespace-as-a-service-V2
+  title: Namespace As A Service
   description: Onboarding: Create your project Namespace for your container workloads
 spec:
   owner: user:guest

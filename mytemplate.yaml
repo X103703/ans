@@ -3,7 +3,7 @@ kind: Template
 metadata:
   name: naas
   title: namespace as a Service
-  description: Create your project Namespace for your container workloads
+  description: Get a namespace for your container workloads
 spec:
   owner: user:guest
   type: service

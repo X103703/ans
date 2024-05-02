@@ -5,5 +5,5 @@ metadata:
   description: Stores artist details
 spec:
   type: database
-  owner: artist-relations-team
+  owner: guests
   system: examples

@@ -5,5 +5,5 @@ metadata:
   description: Stores artist details
 spec:
   type: database
-#  owner: artist-relations-team
-#  system: artist-engagement-portal
+  owner: artist-relations-team
+  system: examples

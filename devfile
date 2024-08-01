@@ -2,7 +2,7 @@ kind: DevWorkspace
 apiVersion: workspace.devfile.io/v1alpha2
 metadata:
   name: my-devworkspace
-  namespace: user1-dev
+  namespace:  desboisdimitri-dev
 spec:
   routingClass: che
   started: true
